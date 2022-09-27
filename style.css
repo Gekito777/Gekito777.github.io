@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border-radius: 1px solide gold;
+    padding: 15px;
+
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: black;
+    gap: 30px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: darkcyan;
+    box-shadow: inset 2px 2px 3px whitesmoke, 
+                        2px 2px 3px white;
+    width: min(100% - 1rem, 500px);
+    border-radius: 10px;
+    margin-inline: auto;
+    padding: 20px;
+    border: none;
+    color: rgb(0, 0, 0);
+    gap: 10px;
+    list-style: none;
+    font-family: monospace;
+    font-size: 20px;
+    align-items: center;
+    
+} 
+
+main{
+    width: min(100% - 1rem, 500px);
+    margin-inline: auto;
+    border: 1px solid white;
+}
+
+main > ul > li{
+    padding: 20px;
+    list-style: none;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+form > input {
+    width:  min(100% - 1rem, 200px);
+}
+
+button{
+    width: min(100% - 2rem, 200px);
+    padding: 5px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+
+.btnArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
