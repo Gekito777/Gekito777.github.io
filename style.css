@@ -81,6 +81,17 @@ button{
 }
 
 @media only screen and (max-width: 450px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: aliceblue;
+        border-radius: 1px solide gold;
+        padding: 15px;
+    
+    }
+
     form{
         display: flex;
         flex-direction: column;
