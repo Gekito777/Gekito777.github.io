@@ -1,0 +1,15 @@
+const index = existingtext.indexOf('test')
+undefined
+existingtext.splice(index, 1, "this should be the new text to insert")
+
+2app.js:56 newText
+textData
+(6) ['test', 'test', 'test', 'im finally able to make text persistant after refr…ng each node, will have to figureout a way around', 'Ever since i was able to make the text stay, i have not found a way to take off what i wrote', 'testing click']
+const index = textData.indexOf('test')
+undefined
+textData.splice(index, 1, "this should be the new text to insert")
+['test']
+let listTag = document.querySelectorAll("li")
+undefined
+listTag[0].innerHTML = textData[0];
+'this should be the new text to insert'
