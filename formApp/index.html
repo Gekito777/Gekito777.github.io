@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navigation">
+        
+        
+        
+    </nav>
+    <form onsubmit="event.preventDefault(); validateMyForm();" action="" class="form">
+        <h1>WFOPM Form</h1>
+        <label for="">Store</label>
+        <input type="text" id="Store"  value="">
+        <label for="">Equipment</label>
+        <input type="text" id="Equipment" value="">
+        <label for="">Serial</label>
+        <input type="text" id="Serial" value="">
+        <label for="">Make</label>
+        <input type="text" id="Make" value="">
+        <label for="">Issue</label>
+        <input type="text" minlength="8" maxlength="100"  id="Issue" value="">
+        <label for="">Parts</label>
+        <input type="text" id="Parts" value="">
+        <label for="">FSP</label>
+        <input type="text" id="FSP" value="">
+        <label for="lift">Lift</label>
+        <input type="text" id="lift" value="">
+        
+        <div class="btnArea"><button id="myBtn" >Send</button> <button id="refreshBtn">Refresh</button></div>
+    </form>
+    
+
+    <main>
+        <ul id="formPrint">
+            
+        </ul>
+    </main>
+
+<script src="app.js"></script>
+    
+</body>
+</html>
