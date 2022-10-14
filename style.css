@@ -74,18 +74,7 @@ img + .overlay {
   margin-top: 0px;
 }
 
-.dropmenu {
-  display: none;
-  flex-direction: column;
-  background-color: white;
-  height: 700px;
-  gap: 5px;
-  padding: 10px;
-  width: 200px;
-  transform: translateX(-600px);
-  transition: 200ms;
-}
-.active {
+#dropmenu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -93,8 +82,21 @@ img + .overlay {
   gap: 5px;
   padding: 10px;
   width: 200px;
+  transform: translateX(-600px);
+  transition: all 300ms ease-in-out;
+  opacity: 0;
+}
+#dropmenu.active {
+  display: flex;
+  /* flex-direction: column;
+  background-color: white;
+  height: 700px;
+  gap: 5px;
+  padding: 10px;
+  width: 200px; */
   transform: translateX(1px);
-  transition: 200ms;
+  transition: all 300ms ease-in-out;
+  opacity: 1;
 }
 
 .dropmenu > div:nth-child(2) {

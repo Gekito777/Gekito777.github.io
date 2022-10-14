@@ -1,5 +1,5 @@
 const btn = document.querySelector("#burger_container");
-const menuDrop = document.querySelector(".dropmenu");
+const menuDrop = document.querySelector("#dropmenu");
 
 // btn.addEventListener("click", function (i) {});
 
