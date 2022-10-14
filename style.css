@@ -8,6 +8,7 @@ body {
   background-color: rgb(63, 62, 62);
   margin-inline: auto;
   height: 768px;
+  position: absolute;
 }
 
 nav {
@@ -17,6 +18,7 @@ nav {
   background-color: rgb(208, 221, 221);
   z-index: 1;
   pad: 10px;
+  position: static;
 }
 
 .burger {
@@ -48,24 +50,25 @@ nav {
   cursor: pointer;
 }
 
-.show {
-  display: block;
-}
-
 img {
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   z-index: -2;
-  position: absolute;
-  width: min(100% - 0.1rem, 1920px);
-  height: 768px;
-  margin-inline: auto;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.48);
-  width: min(100% - 0.1rem, 1920px);
-  height: 768px;
-  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  border: none;
   z-index: -1;
   box-shadow: inset 0px -100px 60px rgb(63, 62, 62);
 }
