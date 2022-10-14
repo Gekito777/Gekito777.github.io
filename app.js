@@ -4,15 +4,14 @@ const menuDrop = document.querySelector("#dropmenu");
 // btn.addEventListener("click", function (i) {});
 
 document.addEventListener("mousedown", function (i) {
-  if (i.target.matches("#burger_container") || i.target.closest(".burger")) {
+  if (i.target === btn || i.target.closest(".burger")) {
     menuDrop.classList.toggle("active");
-    console.log(i.target);
-  } else if (
+  } else if (i.target === menuDrop) return;
+  else if (
     !i.target.matches("#burger_container") ||
     !i.target.closest(".burger")
   ) {
     menuDrop.classList.remove("active");
-    console.log(i.target);
   }
 });
 
