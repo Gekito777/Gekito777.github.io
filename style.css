@@ -82,15 +82,19 @@ img + .overlay {
   gap: 5px;
   padding: 10px;
   width: 200px;
+  transform: translateX(-600px);
+  transition: 200ms;
 }
-.show {
-  display: none;
+.active {
+  display: flex;
   flex-direction: column;
   background-color: white;
   height: 700px;
   gap: 5px;
   padding: 10px;
   width: 200px;
+  transform: translateX(1px);
+  transition: 200ms;
 }
 
 .dropmenu > div:nth-child(2) {
