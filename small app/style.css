@@ -426,10 +426,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    grid-template-columns: repeat(8, 1fr);
     padding: 10px;
     margin-top: 5px;
-    width: min(100% - 2rem, 800px);
+    width: min(100% - 2rem, 500px);
     height: max(30px);
     text-align: start;
     background-color: rgb(154, 173, 136);
