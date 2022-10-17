@@ -438,7 +438,7 @@ footer {
     transition: all 100ms ease-in-out;
     list-style: none;
     font-size: 15px;
-    overflow: none;
+    overflow: scroll;
   }
 }
 
