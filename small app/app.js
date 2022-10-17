@@ -1,49 +1,35 @@
-//Add list to the DOm with inner html value taken from the input text.
 const Btn = document.querySelector(".myBtn");
 const addText = document.querySelector("[name='text']");
-
-// grabs value from input text and insers a list tag in html
 
 function inserText(text) {
   if (text === "") return;
   textData.push(text);
   const li = document.createElement("li");
   const mainArea = document.querySelector("#myList");
-  mainArea.appendChild(
-    li
-  ).innerHTML = `${text}<span><button id="ListEdit">Edit</button> <button id="liClear">X</button></span>`;
+  mainArea.appendChild(li).innerHTML = `${capitalizeFirstLetter(
+    text
+  )}<span><button id="ListEdit">Edit</button> <button id="liClear">X</button></span>`;
   localStorage.setItem("text", JSON.stringify(textData));
   addText.value = "";
 }
 
-///// on refresh || page Reload local data//
-
 const existingtext = JSON.parse(localStorage.getItem("text")) || [];
 const textData = [];
 const textToErase = existingtext;
-// existingtext.forEach((text) => {
- 
-//   inserText(text);
-// });
 
-for (ele of existingtext){
-  inserText(ele)
+for (ele of existingtext) {
+  inserText(capitalizeFirstLetter(ele));
 }
-function capitalizeFirstLetter(str) {
 
-  // converting first letter to uppercase
+function capitalizeFirstLetter(str) {
   const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
 
   return capitalized;
 }
-/////
-//onclick button function
 
 Btn.addEventListener("click", () => {
   inserText(addText.value);
 });
-
-//on keypress event for the input area
 
 addText.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
@@ -53,13 +39,9 @@ addText.addEventListener("keypress", function (event) {
   }
 });
 
-//WORKING ON USING A POPUP CLICK EVENT TO ACCEPT O NOT ACCEPT INSTEAD OF  THE PROMP.
-//NEED TO GENERATE A RANDOM ID FOR EACH LI BEFORE USING THIS CODE.(Completed task)//
 let allList = document.querySelectorAll("li");
 
 function resfreshPage() {
-  // REFRESH PAGE FUNCTION
-
   window.location.reload();
 }
 
@@ -68,35 +50,32 @@ document.body.addEventListener(
   function (e) {
     console.log(e.target);
     console.log(e.clientY);
-    if(e.target === document.querySelector("#ListEdit")){
-      const inputEdit = document.createElement("input")
-      const parentEle = document.querySelector("#ListEdit").closest("li")
+    if (e.target === document.querySelector("#ListEdit")) {
+      const inputEdit = document.createElement("input");
+      const parentEle = document.querySelector("#ListEdit").closest("li");
       inputEdit.style.position = "absolute";
-      inputEdit.classList.add("editor")
-      parentEle.appendChild(inputEdit)
-     
-      inputEdit.addEventListener("keypress", function(e){
+      inputEdit.classList.add("editor");
+      parentEle.appendChild(inputEdit);
+      inputEdit.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
           e.preventDefault();
           const clearNode = e.target.closest("li");
           const index = Array.from(clearNode.parentElement.children).indexOf(
             clearNode
           );
-    
+
           textData.splice(index, 1, inputEdit.value);
-    
+
           localStorage.setItem("text", JSON.stringify(textData));
-    
+
           console.log(textData);
-    
+
           console.log(`Text Block Erased`);
-          window.resfreshPage()
-          
+          window.resfreshPage();
+        }
+      });
     }
-  });
-     
-    }
-    
+
     if (e.target.nodeName === "LI") {
       e.target.style.textDecorationLine = "line-through";
     }
@@ -117,7 +96,7 @@ document.body.addEventListener(
 
       console.log(`Text Block Erased`);
 
-      liNodes[index].remove() 
+      liNodes[index].remove();
       // liNodes[index].style.pointerEvents = "none";
       // window.resfreshPage()
     }
