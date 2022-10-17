@@ -18,7 +18,7 @@ const textData = [];
 const textToErase = existingtext;
 
 for (ele of existingtext) {
-  inserText(capitalizeFirstLetter(ele));
+  inserText(ele);
 }
 
 function capitalizeFirstLetter(str) {
