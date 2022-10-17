@@ -48,8 +48,6 @@ function resfreshPage() {
 document.body.addEventListener(
   "mousedown",
   function (e) {
-    console.log(e.target);
-    console.log(e.clientY);
     if (e.target === document.querySelector("#ListEdit")) {
       const inputEdit = document.createElement("input");
       const parentEle = document.querySelector("#ListEdit").closest("li");

@@ -87,7 +87,7 @@ img {
   gap: 10px;
   width: min(100% - 1rem, 100%);
   margin-inline: auto;
-  border: 1px solid black;
+  border: none;
 }
 
 nav {
@@ -192,14 +192,12 @@ main {
   padding: 20px;
 }
 
-
-
 .clickEvent {
   border: 1px solid black;
   border-radius: 10px;
 }
 
-video{
+video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -313,32 +311,31 @@ footer {
   border-radius: 10px;
   height: 100px;
 }
-.newlicontainer{
- display: flex;
- flex-direction: row;
- gap: 5px;
- justify-content: space-between;
- padding: 10px;
+.newlicontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 10px;
 }
-#newText{
-width: min(100% - 4rem, 900px);
-text-align: center;
-font-size: 20px;
+#newText {
+  width: min(100% - 4rem, 900px);
+  text-align: center;
+  font-size: 20px;
 }
-.myBtn{
-    background-color: rgb(154, 179, 231);
-    padding: 5px;
-    font-family: monospace;
-    font-weight: 900;
-    border-radius: 5px;
-    font-size: 20px;
-    border: none;
-    box-shadow: inset 0px 0px 5px gold;
-    
+.myBtn {
+  background-color: rgb(154, 179, 231);
+  padding: 5px;
+  font-family: monospace;
+  font-weight: 900;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  box-shadow: inset 0px 0px 5px gold;
 }
-.myBtn:hover{
-    scale: 1.03;
-    box-shadow:  0px 0px 5px rgb(17, 17, 15);
+.myBtn:hover {
+  scale: 1.03;
+  box-shadow: 0px 0px 5px rgb(17, 17, 15);
 }
 
 /* todo list  END*/
