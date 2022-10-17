@@ -388,6 +388,15 @@ footer {
     padding: 10px;
     color: black !important;
   }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    width: min(100% - 1rem, 100%);
+    margin-inline: auto;
+    border: none;
+  }
 
   #btnMenu {
     display: flex;
