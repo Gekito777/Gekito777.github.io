@@ -1,17 +1,31 @@
 const countermeter = document.querySelector("#counter");
 const counterInput = document.querySelector("#newText");
-let counter = 0;
-let maxCount = 30;
+
+let maxCount = 28;
+let mincount = 2
+function counterHandler(){
+  let counter = parseInt(counterInput.value.length)
+    
+    countermeter.innerText = `${counter}/30`;
+    let newcount = parseInt(countermeter.innerText)
+    
+  };
+
 
 counterInput.addEventListener('keydown', function(e){
-
-  if ( counterInput.value.length !== maxCount) {   
-
-    let counter = counterInput.value.length
-    
-    countermeter.innerText = `${counter+1} /30`;
-    let newcount = parseInt(countermeter.innerText)
-    console.log(e)}
-
+  let counter = counterInput.value.length;
+  if(countermeter.innerText.length < 2) return;
+  if(e.key === "Backspace" || e.key === "Delete") {
   
+    return counterHandler();
+  };
+
+  if (counter !== maxCount || counter !== mincount) {   
+
+    counterHandler();
+    
+
+  }else if (counterInput.value.length === 1){
+    countermeter.textContent = "0";
+  }
 });
