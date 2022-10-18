@@ -11,13 +11,13 @@ function counterHandler(){
     
   };
 
-
+  
 counterInput.addEventListener('keydown', function(e){
   let counter = counterInput.value.length;
   if(countermeter.innerText.length < 2) return;
   if(e.key === "Backspace" || e.key === "Delete") {
-  
-    return counterHandler();
+    counterHandler();
+
   };
 
   if (counter !== maxCount || counter !== mincount) {   
