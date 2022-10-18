@@ -36,6 +36,7 @@ addText.addEventListener("keypress", function (event) {
     event.preventDefault();
     document.querySelector(".myBtn").click();
     addText.value = "";
+    document.querySelector("#counter").textContent = "0/30"
   }
 });
 
@@ -78,7 +79,7 @@ document.body.addEventListener(
       e.target.style.textDecorationLine = "line-through";
     }
     if (e.target.nodeName === "DIV") {
-      document.querySelector(".modalBtn").click();
+      // document.querySelector(".modalBtn").click();
     } else if (e.target.matches("#liClear")) {
       const liNodes = document.querySelectorAll("li");
       const clearNode = e.target.closest("li");
@@ -108,20 +109,20 @@ const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modalBtn");
 const modalOpen = document.querySelector("#modalOpen");
 
-modalClose.addEventListener("click", function (event) {
-  event.preventDefault();
-  if (event.target === modalClose) {
-    modal.style.display = "none";
-  }
-});
+// modalClose.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   if (event.target === modalClose) {
+//     modal.style.display = "none";
+//   }
+// });
 
-modalOpen.addEventListener("click", function (event) {
-  event.preventDefault();
-  if (event.target === modalOpen) {
-    modal.style.display = "flex";
-  }
-  return;
-});
+// modalOpen.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   if (event.target === modalOpen) {
+//     modal.style.display = "flex";
+//   }
+//   return;
+// });
 
 ///
 const textSquare = document.querySelector("#textSquare");

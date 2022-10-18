@@ -7,7 +7,7 @@
 body {
   background-color: rgb(63, 62, 62);
   margin-inline: auto;
-  height: fit-content;
+  height: 100vh;
   position: absolute;
 }
 
@@ -18,6 +18,7 @@ nav {
   height: min(40px);
   background-color: rgb(208, 221, 221);
   padding-top:2px;
+  position: fixed;
  z-index: 1;
   
 }
