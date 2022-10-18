@@ -438,8 +438,8 @@ footer {
     margin-inline: auto;
     transition: all 100ms ease-in-out;
     list-style: none;
-    font-size: 15px;
-    overflow: scroll;
+    font-size: 10px;
+    overflow: none;
   }
 }
 
