@@ -5,27 +5,20 @@ let maxCount = 28;
 let mincount = 2
 function counterHandler(){
   let counter = parseInt(counterInput.value.length)
-    
     countermeter.innerText = `${counter}/30`;
-    let newcount = parseInt(countermeter.innerText)
-    
+    let newcount = parseInt(countermeter.innerText) 
   };
-
-  
 counterInput.addEventListener('input', function(e){
   let counter = counterInput.value.length;
   if(countermeter.innerText.length < 2) return;
   if(e.key === "Backspace" || e.key === "Delete") {
-    counterHandler();
-
+  counterHandler();
   };
 
   if (counter !== maxCount || counter !== mincount) {   
-
     counterHandler();
-    
-
-  }else if (counterInput.value.length === 1){
+  }
+  else if (counterInput.value.length === 1){
     countermeter.textContent = "0";
   }
 });
