@@ -39,7 +39,7 @@ Btn.addEventListener("click", () => {
   countermeter.innerText = "0/30"
 });
 
-addText.addEventListener("keypress", function (event) {
+addText.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     document.querySelector(".myBtn").click();
@@ -68,7 +68,7 @@ document.body.addEventListener(
       const backBtn = document.createElement("button")
       backBtn.classList.add("backBtn")
       allList[index].appendChild(backBtn)
-      inputEdit.addEventListener("keyup", function (e) {
+      inputEdit.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
           e.preventDefault();
           console.dir(e.target.parentElement)

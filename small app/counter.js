@@ -6,7 +6,6 @@ let mincount = 2
 function counterHandler(){
   let counter = parseInt(counterInput.value.length)
     countermeter.innerText = `${counter}/30`;
-    let newcount = parseInt(countermeter.innerText) 
   };
 counterInput.addEventListener('input', function(e){
   let counter = counterInput.value.length;
