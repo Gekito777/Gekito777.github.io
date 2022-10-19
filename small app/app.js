@@ -6,10 +6,18 @@ function inserText(text) {
   textData.push(text);
   const li = document.createElement("li");
   const mainArea = document.querySelector("#myList");
-  mainArea.appendChild(li).innerHTML = `${capitalizeFirstLetter(
-    text
-  )}<span><button id="ListEdit">Edit</button> <button id="liClear">X</button></span>`;
+  mainArea.appendChild(li).innerHTML = capitalizeFirstLetter(text);
   localStorage.setItem("text", JSON.stringify(textData));
+  const edit = document.createElement("button");
+  edit.innerText = "Edit"
+  edit.id = "ListEdit";
+  const liClear = document.createElement("button");
+  liClear.innerText = "X";
+  liClear.id = "liClear";
+  const span = document.createElement("span");
+  span.appendChild(edit);
+  span.appendChild(liClear);
+  li.appendChild(span);
   addText.value = "";
 }
 
@@ -18,7 +26,7 @@ const textData = [];
 const textToErase = existingtext;
 
 for (ele of existingtext) {
-  inserText(ele);
+  inserText(ele.trim());
 }
 
 function capitalizeFirstLetter(str) {
@@ -49,12 +57,17 @@ function resfreshPage() {
 document.body.addEventListener(
   "mousedown",
   function (e) {
-    if (e.target === document.querySelector("#ListEdit")) {
+    if (e.target.matches("#ListEdit")) {
+      const clearNode = e.target.closest("li");
+      const index = Array.from(clearNode.parentElement.children).indexOf(
+        clearNode
+      );
       const inputEdit = document.createElement("input");
-      const parentEle = document.querySelector("#ListEdit").closest("li");
+      const parentEle = document.querySelectorAll("li");
       inputEdit.style.position = "absolute";
+      inputEdit.style.marginLeft = "0"
       inputEdit.classList.add("editor");
-      parentEle.appendChild(inputEdit);
+      parentEle[index].appendChild(inputEdit);
       inputEdit.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
           e.preventDefault();
@@ -75,8 +88,10 @@ document.body.addEventListener(
       });
     }
 
-    if (e.target.nodeName === "LI") {
-      e.target.style.textDecorationLine = "line-through";
+    if (e.target.matches("li") || !e.target.closest("ol")) {
+    
+      // e.target.style.textDecorationLine = "line-through";
+      return;
     }
     if (e.target.nodeName === "DIV") {
       // document.querySelector(".modalBtn").click();
