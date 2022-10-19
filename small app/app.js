@@ -118,28 +118,7 @@ document.body.addEventListener(
   false
 );
 
-//modal under construction.
 
-const modal = document.querySelector(".modal");
-const modalClose = document.querySelector(".modalBtn");
-const modalOpen = document.querySelector("#modalOpen");
-
-// modalClose.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   if (event.target === modalClose) {
-//     modal.style.display = "none";
-//   }
-// });
-
-// modalOpen.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   if (event.target === modalOpen) {
-//     modal.style.display = "flex";
-//   }
-//   return;
-// });
-
-///
 const textSquare = document.querySelector("#textSquare");
 const btnMenudrop = document.querySelector("#btnMenu");
 const dropMenu = document.querySelector(".drop_downMenu");
