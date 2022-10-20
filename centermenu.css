@@ -1,0 +1,141 @@
+#mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    width:330px;
+    height:330px;
+   
+    background-color: rgba(240, 248, 255, 0.432);
+    margin-inline: 25%;
+     margin-top: 100px;
+     text-align: center;
+     align-items: center;
+     z-index: 2;
+     position: absolute;
+     top:0; bottom:0; left:0;right:0;
+     margin:auto;
+     border-radius:50%; 
+
+}
+#mainContainer > div:nth-child(even){
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    width:30px;
+  height:30px;
+    margin-inline: auto;
+    justify-content: center;
+    text-align: center;
+    
+    
+}
+#mainContainer > div:nth-child(odd){
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: black;
+    width:30px;
+    height:30px;
+    margin-inline: auto;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+/* box1 */
+
+
+/* box2 */
+
+/* box3 */
+
+.box1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    animation-name: circling;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 20s linear infinite;
+    animation-delay: 5000ms;
+    
+}
+
+    
+.box2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+     animation-name: circling;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 20s linear infinite;
+    animation-delay: 10000ms;
+    
+}
+.box3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+     animation-name: circling;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+ 
+}
+.box4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+     animation-name: circling;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 20s linear infinite;
+    animation-delay: 15000ms;
+}
+.box5{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+     animation-name: circling;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 20s linear infinite;
+    animation-delay: 20000ms;
+}
+
+@keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+  }
+/* box4 */
+/* box5 */
+/* box6 */

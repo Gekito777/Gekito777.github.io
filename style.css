@@ -6,7 +6,7 @@
 
 body {
   background-color: rgb(63, 62, 62);
-  margin-inline: auto;
+  width: 100vw;
   height: 100vh;
   position: absolute;
 }

@@ -54,32 +54,32 @@ function resfreshPage() {
 document.body.addEventListener(
   "mousedown",
   function (e) {
-    if (e.target.matches("#ListEdit")) {
-      const clearNode = e.target.closest("li");
-      const index = Array.from(clearNode.parentElement.children).indexOf(
-        clearNode
-      );
-      const li = document.createElement("li")
-        const parent = document.querySelector("ol")
-      const inputEdit = document.createElement("input");
-      inputEdit.classList.add("editor"); 
-      inputEdit.style.transition = "200ms ease-in";
-      parent.replaceChild(inputEdit, allList[index]);
-      const backBtn = document.createElement("button")
-      backBtn.classList.add("backBtn")
-      allList[index].appendChild(backBtn)
-      inputEdit.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          console.dir(e.target.parentElement)
-          textData.splice(index, 1, inputEdit.value);
-          localStorage.setItem("text", JSON.stringify(textData));
-          resfreshPage();
+    // if (e.target.matches("#ListEdit")) {
+    //   const clearNode = e.target.closest("li");
+    //   const index = Array.from(clearNode.parentElement.children).indexOf(
+    //     clearNode
+    //   );
+    //   const li = document.createElement("li")
+    //     const parent = document.querySelector("ol")
+    //   const inputEdit = document.createElement("input");
+    //   inputEdit.classList.add("editor"); 
+    //   inputEdit.style.transition = "200ms ease-in";
+    //   parent.replaceChild(inputEdit, allList[index]);
+    //   const backBtn = document.createElement("button")
+    //   backBtn.classList.add("backBtn")
+    //   allList[index].appendChild(backBtn)
+    //   inputEdit.addEventListener("keydown", function (e) {
+    //     if (e.key === "Enter") {
+    //       e.preventDefault();
+    //       console.dir(e.target.parentElement)
+    //       textData.splice(index, 1, inputEdit.value);
+    //       localStorage.setItem("text", JSON.stringify(textData));
+    //       resfreshPage();
           
          
-        }
-      });
-    }
+    //     }
+    //   });
+    // }
     if (e.target.matches("li") || !e.target.closest("ol")) {
       return;
     }
