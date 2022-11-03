@@ -28,24 +28,21 @@ nav {
   display: flex;
   flex-direction: column;
   background-color: rgba(238, 150, 150, 0);
-  width: min(55px);
+  width: min(45px);
   gap: 6px;
-  padding: 2px;
+  padding: 5px;
   margin-top: 16px;
-  border: none;
+  /* border: 1px solid black; */
   justify-content: left;
   transition: 400ms ease-out;
   cursor: pointer;
   position: absolute;
   z-index: 2;
 }
-#burger_container:hover {
-  background-color: rgb(109, 197, 224);
-  transition: 400ms ease-in;
-}
 
-#burger_container:hove4 * {
-  box-shadow: 0px 0px 10px gold;
+#burger_container.active * {
+  box-shadow: 0px 0px 5px rgb(55, 90, 185);
+  transition: 400ms ease-in;
 }
 .burger {
   display: flex;
