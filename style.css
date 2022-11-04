@@ -241,7 +241,7 @@ div > ul {
     overflow-y: visible;
   }
   #mainContainer {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 10px;
