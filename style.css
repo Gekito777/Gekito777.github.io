@@ -228,7 +228,21 @@ div > ul {
   grid-row-end: 5;
 }
 
+section{
+  background-color: rgba(20, 20, 17, 0.87);
+  color: rgb(255, 255, 255);
+  width: min(100% - 2rem, 400px);
+  margin-inline: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  line-height: 1.8;
+  box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 20px;
 
+}
 
 
 
