@@ -23,7 +23,6 @@ nav {
   background-color: rgb(208, 221, 221);
   padding-top: 2px;
   padding-left: 10px;
-  /* position: fixed; */
   z-index: 1;
 }
 
@@ -48,7 +47,6 @@ a:hover{
   gap: 6px;
   padding: 5px;
   margin-top: 16px;
-  /* border: 1px solid black; */
   justify-content: left;
   transition: 400ms ease-out;
   cursor: pointer;
@@ -262,7 +260,7 @@ h3{
     width: 100%;
     }
   img {
-    width: 100vw;
+    width: 1276px;
     height: 100vh;
     margin-inline: auto;
     object-fit: cover;
@@ -276,7 +274,7 @@ h3{
   
   .overlay {
     background-color: rgba(0, 0, 0, 0.48);
-    width: 100vw;
+    width: 1276px;
     height: 100vh;
     object-fit: cover;
     position: fixed;
@@ -414,7 +412,6 @@ h3{
 }
 @media screen and (max-width: 500px) {
  
-
   nav {
     display: flex;
     flex-direction: column;
@@ -425,8 +422,6 @@ h3{
     padding-left: 10px;
     z-index: 2;
   }
-  
-
   .container{
     display: flex;
     flex-direction: column;
@@ -436,7 +431,7 @@ h3{
      width: 100%;
     }
   img {
-    width: 100vw;
+    width: 500px;
     height: 100vh;
     margin-inline: auto;
     object-fit: cover;
@@ -447,10 +442,9 @@ h3{
     bottom: 0;
     z-index: -2;
   }
-  
   .overlay {
     background-color: rgba(0, 0, 0, 0.48);
-    width: 100vw;
+    width: 500px;
     height: 100vh;
     object-fit: cover;
     position: fixed;
@@ -471,6 +465,7 @@ h3{
   }
   
   section{
+    display: none;
     background-color: rgba(20, 20, 17, 0.87);
     color: rgb(255, 255, 255);
     width: min(100% - 2rem, 300px);
@@ -486,14 +481,9 @@ h3{
     z-index: -1;
     transition: all 300ms ease-out;
     transform: translateY(750px);
-    
-  
   }
 
- 
-  
-  h1 {
-    
+  h1 { 
     flex-wrap: wrap;
     text-align: center;
     color: rgb(221, 231, 193);
@@ -503,25 +493,4 @@ h3{
     font-size: 50px;
   }
   
-}
-
-@media screen and (max-width: 500px) {
-  section{
-    display: none;
-    background-color: rgba(20, 20, 17, 0.87);
-    color: rgb(255, 255, 255);
-    width: min(100% - 1rem, 400px);
-    margin-inline: 25%;
-    border-radius: 5px;
-    padding: 20px;
-    position: absolute;
-    line-height: 1.8;
-    box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
-    font-family: monospace;
-    font-weight: 700;
-    font-size: 20px;
-    z-index: -1;
-    transition: all 300ms ease-out;
-    transform: translateY(880px);
-  }
 }
