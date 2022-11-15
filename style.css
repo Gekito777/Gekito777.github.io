@@ -29,11 +29,15 @@ nav {
 
 a{
   text-decoration: none;
+  transition: 350ms;
 }
 a:hover{
+
   color: goldenrod;
   text-shadow: 2px 2px BLACK;
   text-decoration: none;
+  transition: 350ms;
+
 }
 
 #burger_container {
@@ -503,8 +507,20 @@ h3{
 
 @media screen and (max-width: 500px) {
   section{
-display: none;
-    
-  
+    background-color: rgba(20, 20, 17, 0.87);
+    color: rgb(255, 255, 255);
+    width: min(100% - 1rem, 400px);
+    margin-inline: 25%;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    line-height: 1.8;
+    box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: -1;
+    transition: all 300ms ease-out;
+    transform: translateY(880px);
   }
 }
