@@ -214,6 +214,16 @@ section{
 
 }
 
+/* headers */
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
 /* Media Query */
 
 @media screen and (max-width: 1276px) {
@@ -290,6 +300,11 @@ section{
     font-family: monospace;
     font-weight: 900;
     font-size: 50px;
+    z-index: 1;
+  }
+  section{
+    transform: translateY(650px);
+    transition: all 300ms ease-out;
     z-index: 1;
   }
  
@@ -369,4 +384,5 @@ section{
     font-weight: 900;
     font-size: 50px;
   }
+  
 }
