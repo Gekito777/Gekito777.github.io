@@ -285,10 +285,9 @@ h3{
   }
   
   section{
-    
+    transform: translateY(650px);
     transition: all 300ms ease-out;
     z-index: 1;
-    pointer-events: none;
   }
   
   h1 {
@@ -369,10 +368,26 @@ h3{
   }
   
   section{
-    transform: translateY(650px);
+    background-color: rgba(20, 20, 17, 0.87);
+    color: rgb(255, 255, 255);
+    width: min(100% - 2rem, 400px);
+    margin-inline: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    line-height: 1.8;
+    box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: -1;
     transition: all 300ms ease-out;
-    z-index: 1;
+    transform: translateY(650px);
+    
+  
   }
+
+ 
   
   h1 {
     
@@ -385,4 +400,104 @@ h3{
     font-size: 50px;
   }
   
+}
+@media screen and (max-width: 500px) {
+ 
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: min(80px);
+    background-color: rgb(208, 221, 221);
+    padding-top: 2px;
+    padding-left: 10px;
+    z-index: 2;
+  }
+  
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+     width: 100%;
+    }
+  img {
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.48);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    border: none;
+    z-index: -1;
+    box-shadow: inset 0px -100px 60px rgb(63, 62, 62);
+    margin-inline: auto;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  img + .overlay {
+    margin-top: 0px;
+  }
+  
+  section{
+    background-color: rgba(20, 20, 17, 0.87);
+    color: rgb(255, 255, 255);
+    width: min(100% - 2rem, 300px);
+    margin-inline: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    line-height: 1.8;
+    box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: -1;
+    transition: all 300ms ease-out;
+    transform: translateY(750px);
+    
+  
+  }
+
+ 
+  
+  h1 {
+    
+    flex-wrap: wrap;
+    text-align: center;
+    color: rgb(221, 231, 193);
+    text-shadow: 1px 1px 5px rgb(22, 22, 21);
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  section{
+display: none;
+    
+  
+  }
 }
