@@ -207,9 +207,6 @@ main > div{
   padding: 10px;
 }
 
-
-
-
 section{
   background-color: rgba(20, 20, 17, 0.87);
   color: rgb(255, 255, 255);
@@ -222,7 +219,6 @@ section{
   box-shadow: inset 0px 0px 10px whitesmoke, 20px 50px 20px #0000003d;
   z-index: -1;
   transition: all 300ms ease-out;
-
 }
 
 /* headers */
@@ -238,8 +234,6 @@ h3{
 /* Media Query */
 
 @media screen and (max-width: 1276px) {
- 
-
   nav {
     display: flex;
     flex-direction: column;
@@ -250,7 +244,6 @@ h3{
     padding-left: 10px;
     z-index: 2;
   }
-  
   .container{
     display: flex;
     flex-direction: column;
@@ -271,7 +264,6 @@ h3{
     bottom: 0;
     z-index: -2;
   }
-  
   .overlay {
     background-color: rgba(0, 0, 0, 0.48);
     width: 1276px;
@@ -290,19 +282,15 @@ h3{
     bottom: 0;
     z-index: 1;
   }
-  
   img + .overlay {
     margin-top: 0px;
   }
-  
   section{
     transform: translateY(650px);
     transition: all 300ms ease-out;
     z-index: 1;
   }
-  
   h1 {
-    
     flex-wrap: wrap;
     text-align: center;
     color: rgb(221, 231, 193);
@@ -315,12 +303,8 @@ h3{
     transition: all 300ms ease-out;
     z-index: 1;
   }
- 
 }
-
 @media screen and (max-width: 900px) {
- 
-
   nav {
     display: flex;
     flex-direction: column;
@@ -331,8 +315,6 @@ h3{
     padding-left: 10px;
     z-index: 2;
   }
-  
-
   .container{
     display: flex;
     flex-direction: column;
@@ -353,7 +335,6 @@ h3{
     bottom: 0;
     z-index: -2;
   }
-  
   .overlay {
     background-color: rgba(0, 0, 0, 0.48);
     width: 100vw;
@@ -371,11 +352,9 @@ h3{
     top: 0;
     bottom: 0;
   }
-  
   img + .overlay {
     margin-top: 0px;
   }
-  
   section{
     background-color: rgba(20, 20, 17, 0.87);
     color: rgb(255, 255, 255);
@@ -395,9 +374,6 @@ h3{
     
   
   }
-
- 
-  
   h1 {
     
     flex-wrap: wrap;
@@ -407,11 +383,9 @@ h3{
     font-family: monospace;
     font-weight: 900;
     font-size: 50px;
-  }
-  
+  }  
 }
 @media screen and (max-width: 500px) {
- 
   nav {
     display: flex;
     flex-direction: column;
@@ -459,11 +433,9 @@ h3{
     top: 0;
     bottom: 0;
   }
-  
   img + .overlay {
     margin-top: 0px;
   }
-  
   section{
     display: none;
     background-color: rgba(20, 20, 17, 0.87);
@@ -482,7 +454,6 @@ h3{
     transition: all 300ms ease-out;
     transform: translateY(750px);
   }
-
   h1 { 
     flex-wrap: wrap;
     text-align: center;
@@ -491,6 +462,5 @@ h3{
     font-family: monospace;
     font-weight: 900;
     font-size: 50px;
-  }
-  
+  } 
 }
