@@ -507,6 +507,7 @@ h3{
 
 @media screen and (max-width: 500px) {
   section{
+    display: none;
     background-color: rgba(20, 20, 17, 0.87);
     color: rgb(255, 255, 255);
     width: min(100% - 1rem, 400px);
